@@ -18,6 +18,7 @@ using Javax.Microedition.Khronos.Egl;
 using Javax.Microedition.Khronos.Opengles;
 using Matrix = Android.Opengl.Matrix;
 using Math = System.Math;
+using EGLConfig = Javax.Microedition.Khronos.Egl.EGLConfig;
 
 namespace CrownDriftWatch
 {
@@ -1725,7 +1726,7 @@ namespace CrownDriftWatch
     // =========================================================================
     // ANA 3D OPENGL ES 2.0 MOTORU VE KAMERA / FİZİK DÖNGÜSÜ
     // =========================================================================
-    public class CrownDriftEngine : Java.Lang.Object, GLSurfaceView.IRenderer
+    public void OnSurfaceCreated(IGL10 gl, EGLConfig config)
     {
         private readonly Activity activity;
         private readonly Vibrator vibrator;
